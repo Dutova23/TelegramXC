@@ -1,7 +1,7 @@
 services:
   - type: web
-    name: pravda-bot
+    name: telegram-bot
     env: docker
-    plan: free
     dockerfilePath: ./Dockerfile
+    plan: free
     autoDeploy: true
