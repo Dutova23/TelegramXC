@@ -1,12 +1,7 @@
 services:
   - type: web
     name: pravda-bot
-    env: python
+    env: docker
     plan: free
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.12.3
-    buildCommand: |
-      pip install --upgrade pip setuptools wheel
-      pip install --only-binary=:all: -r requirements.txt
-    startCommand: python Pravdabot.py
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
