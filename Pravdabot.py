@@ -46,10 +46,7 @@ def is_valid_receipt(text: str) -> bool:
 
 TOKEN = "8138545020:AAGlFrjmqLEajeTaoylWAWfhM0NR_R6dB88"
 
-if os.name == 'nt':  # Windows
-    pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-else:
-    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 
