@@ -25,4 +25,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Запускаем приложение
-CMD ["python", "main.py"]
+CMD ["python", "Pravdabot.py"]
