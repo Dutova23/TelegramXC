@@ -1,11 +1,12 @@
 FROM python:3.11-slim
 
-# Устанавливаем системные зависимости
+# Устанавливаем системные зависимости, включая русскую локализацию для tesseract
 RUN apt-get update && apt-get install -y \
     curl \
     gcc \
-    libtesseract-dev \
     tesseract-ocr \
+    tesseract-ocr-rus \
+    libtesseract-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Устанавливаем Rust для сборки pydantic-core
